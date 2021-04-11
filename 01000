@@ -1,0 +1,17 @@
+//A+B
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int i, j, k;
+
+	cin >> i;
+	cin >> j;
+
+	k = i + j;
+
+	cout << to_string(k);
+	return 0;
+}
