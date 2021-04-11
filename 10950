@@ -1,0 +1,16 @@
+// A+B - 3
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int T,A,B;
+	int i = 0;
+	cin >> T ;
+	while (i < T) {
+		cin >> A >> B;
+		cout << A + B << "\n";
+		i++;
+	}
+	return 0;
+}
