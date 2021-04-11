@@ -1,0 +1,29 @@
+// 사칙연산
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int i, j, k, l, m, n, o;
+
+	cin >> i;
+	cin >> j;
+
+	k = i + j;
+	l = i - j;
+	m = i * j;
+	n = i / j;
+	o = i % j;
+
+	cout << to_string(k);
+	cout << "\n";
+	cout << to_string(l);
+	cout << "\n";
+	cout << to_string(m);
+	cout << "\n";
+	cout << to_string(n);
+	cout << "\n";
+	cout << to_string(o);
+	return 0;
+}
