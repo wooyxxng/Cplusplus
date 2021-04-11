@@ -1,0 +1,19 @@
+// A+B-7
+// input : A, B
+// output : A+B
+
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	int A, B, T;
+	int sum;
+	cin >> T;
+	for (int i = 1; i <= T; i++) {
+		cin >> A >> B;
+		sum = A + B;
+		cout << "Case #" << i << ": " << sum << endl;
+	}
+	return 0;
+}
