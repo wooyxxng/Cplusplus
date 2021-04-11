@@ -1,0 +1,15 @@
+// N 찍기 - 1
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	int i = 0;
+	cin >> n;
+	while (i < n) {
+		i++;
+		cout << i << "\n";
+	}
+	return 0;
+}
