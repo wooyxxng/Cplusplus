@@ -1,0 +1,27 @@
+// 나머지
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int i, j, k, l, m, n, o;
+
+	cin >> i;
+	cin >> j;
+	cin >> k;
+
+	l = (i + j) % k;
+	m = ((i % k) + (j % k)) % k;
+	n = (i * j) % k;
+	o = ((i % k) * (j % k)) % k;
+
+	cout << to_string(l);
+	cout << "\n";
+	cout << to_string(m);
+	cout << "\n";
+	cout << to_string(n);
+	cout << "\n";
+	cout << to_string(o);
+	return 0;
+}
