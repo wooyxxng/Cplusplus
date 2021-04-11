@@ -1,0 +1,14 @@
+// 제리와 톰
+// 문제 : 톰이 치즈 1kg을 샀다. 제리가 a/b만큼 훔쳐갔다. 남은 치즈는?
+// input: a, b
+// output: a, b
+
+#include <iostream>
+using namespace std;
+
+int main(){
+	int a, b = 0;
+	cin >> a >> b;
+	cout << b - a << " " << b << endl;
+	return 0;
+}
