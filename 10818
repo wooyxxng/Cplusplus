@@ -1,0 +1,37 @@
+//10818 최소 최대
+//N개의 정수가 주어질 때 최솟값과 최댓값을 구하는 프로그램
+//input : 정수 n개, n개의 정수
+//output : 최솟값, 최댓값
+
+#include <iostream>
+using namespace std;
+
+const int max_min = 1000000;
+int number[max_min];
+
+int main(void)
+{
+	int n, a, max, min;
+
+	cin >> n;
+
+	for (int i = 0; i < n; i++)
+	{
+		cin >> a;
+		number[i] = a;
+	}
+
+	max = number[0];
+	min = number[0];
+
+	for (int j = 0; j < n; j++)
+	{
+		if (number[j] > max)
+			max = number[j];
+		if (number[j] < min)
+			min = number[j];
+	}
+	cout << min << " " << max;
+
+	return 0;
+}
