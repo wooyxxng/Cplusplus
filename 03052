@@ -1,0 +1,35 @@
+//3052 나머지
+//수 10개를 입력받은 뒤, 이를 42로 나눈 나머지를 구하고, 서로 다른 값이 몇 개 있는지 출력하는 프로그램
+//input : 10개의 숫자
+//output : 서로 다른 나머지의 개수
+
+#include <iostream>
+using namespace std;
+
+const int a = 42, b = 10 ; //a=나누는 수, b=입력 받을 숫자 개수
+int rest[b] = { 0 };
+
+int main(void)
+{
+	int n;
+	int sum = 0;
+
+	for (int i = 0; i < b; i++)
+	{
+		cin >> n;
+		rest[i] = n%a;
+		sum += 1;
+		for (int j = 0; j < i; j++)
+		{
+			if (rest[i] == rest[j] && i != j)
+			{
+				sum -= 1;
+				break;
+			}	
+		}
+	}
+	
+	cout << sum << endl;
+	
+	return 0;
+}
