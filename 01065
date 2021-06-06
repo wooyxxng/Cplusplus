@@ -1,0 +1,35 @@
+// 1065. 한수
+
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	int n;
+	int hansu = 0, count = 0;
+
+	cin >> n;
+
+	if (n < 100)
+		hansu = n;
+
+	if (100 <= n && n <= 1000)
+	{
+		for (int i = 100; i <= n; i++)
+		{
+			int hansu[3];
+
+			hansu[0] = i % 100 % 10; //1의자리 숫자
+			hansu[1] = i % 100 / 10; //10의자리 숫자
+			hansu[2] = i / 100; // 100의자리 숫자
+
+			if (hansu[0] - hansu[1] == hansu[1] - hansu[2])
+				count++;
+		}
+		hansu = 99 + count;
+	}
+
+	cout << hansu;
+
+	return 0;
+}
