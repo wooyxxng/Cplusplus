@@ -1,0 +1,43 @@
+// 4344. 평균은 넘겠지
+
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	int C, N, sum, avg, count;
+	int score[1000] = { 0 };
+
+	cin >> C; //테스트 케이스의 개수
+
+	for (int i = 0; i < C; i++) // C번 반복
+	{
+		sum = 0; // 초기화
+		avg = 0; // 초기화
+		count = 0; // 초기화
+
+		cin >> N; // 학생 수
+
+		for (int j = 0; j < N; j++) // N번 반복
+		{
+			cin >> score[j]; // 배열에 N명의 점수 저장
+			sum += score[j]; // N명의 점수의 합
+		}
+
+		avg = sum / N; // 평균 구하기
+
+		for (int k = 0; k < N; k++) // N번 반복
+		{
+			if (avg < score[k]) // 평균보다 점수가 높은 학생 수 구하기
+				count++; 
+		}
+
+		double result = (double)count / N * 100; // 소수점 표기해야 하니 자료형을 double로 변경
+
+		cout << fixed; // 소수점을 고정시켜 표현
+		cout.precision(3); // 3자리까지 표현
+		cout << result << "%" << endl;
+	}
+
+	return 0;
+}
