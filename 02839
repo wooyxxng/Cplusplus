@@ -1,0 +1,32 @@
+//2839. 설탕배달
+
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	int N; // 담아야 할 설탕의 질량
+	int result = 0; // 봉지 개수
+
+	cin >> N;
+
+	while (N >= 0) // 설탕을 다 담을 때까지
+	{
+		// 5kg 짜리 봉지의 개수가 최대가 될 때 result 값이 가장 작으므로
+
+		if (N % 5 == 0) // N이 5로 나누어 떨어지면
+		{
+			result += (N / 5); // 필요한 봉지의 개수는 N/5와 같다
+
+			cout << result;
+
+			return 0;
+		}
+		N -= 3; // 3kg 봉지 사용
+		result++; // 봉지 개수 1개 늘리기
+	}
+
+	cout << -1; // 모든 조건에 걸리지 않을 때 -1 출력
+
+	return 0;
+}
