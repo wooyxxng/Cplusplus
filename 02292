@@ -1,0 +1,26 @@
+//2292. 벌집
+
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+    int num; 
+
+    cin >> num; // 숫자 입력받기
+
+    int i = 0; // 이동횟수
+
+    if (num == 1) // 예외 처리
+        i = 1;
+
+    if (num != 1)
+    {
+        for (int sum = 2; sum <= num; i++) // 수열의 규칙: 이동횟수가 변하는 방 번호
+            sum += 6 * i;
+    }
+
+    cout << i;
+
+    return 0;
+}
